@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filters | Zetta Rights</title>
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <script src="./assets/js/tailwind.js"></script>
+    <link
+      rel="icon"
+      href="./assets/images/Home/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/vendor/swiper.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/filters.css" />
+  </head>
+  <body>
+    <dialog class="filter-dialog">
+      <div class="filter-header flex items-center justify-between pb-[2vw]">
+        <h1 class="text-[clamp(1rem,2vw,2rem)]">Filter</h1>
+        <div class="dialog-close">
+          <img src="./assets/images/Explore/close_Icon.png" alt="" />
+        </div>
+      </div>
+      <div class="filters-container">
+        <div class="filter-group">
+          <h2 class="filter-title">ContentTypes</h2>
+          <div class="filter-items">
+            <div class="item">Movie</div>
+            <div class="item">Series</div>
+            <div class="item">Kids Content</div>
+            <div class="item">Documentary</div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <h2 class="filter-title">Genres</h2>
+          <div class="filter-items">
+            <div class="item">Action</div>
+            <div class="item">Comedy</div>
+            <div class="item">Drama</div>
+            <div class="item">Scifi</div>
+            <div class="item">Romance</div>
+            <div class="item">Horror</div>
+            <div class="item">Thriller</div>
+            <div class="item">Fantasy</div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <h2 class="filter-title">Languages</h2>
+          <div class="filter-items">
+            <div class="item">Tamil</div>
+            <div class="item">Kannada</div>
+            <div class="item">Telugu</div>
+            <div class="item">English</div>
+            <div class="item">Hindi</div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <h2 class="filter-title">Formats</h2>
+          <div class="filter-items">
+            <div class="item">HD</div>
+            <div class="item">Full HD</div>
+            <div class="item">DVD</div>
+            <div class="item">4K</div>
+            <div class="item">Dolby Digital</div>
+          </div>
+        </div>
+      </div>
+      <div class="filter-buttons flex justify-end gap-[2vw]">
+        <button class="clear-filter">Clear All</button>
+        <button class="apply-filter">Apply Filter</button>
+      </div>
+    </dialog>
+    <button class="scroll-top-btn active" style="background: conic-gradient(rgb(255, 204, 0) 9.02995%, rgb(26, 26, 26) 9.02995%);">
+      <img src="./assets/images/Home/Header/gotoTop.png" alt="">
+    </button>
+    <header
+      class="header-primary sticky top-0 z-[9999] flex justify-between w-[100%] bg-[var(--bg-primary)] 2xl:px-32 py-6 px-10"
+    >
+      <nav class="nav-left flex items-center">
+        <a class="logo w-[9vw] min-w-[120px]" href="./index.html">
+          <img src="./assets/images/Home/Header/logo.png" alt="" />
+        </a>
+        <ul
+          class="nav-links ml-16 gap-8 flex lg:ml-16 text-[var(--text-gray)] xl:ml-32 lg:gap-14"
+        >
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="./index.html" class="lg:text-[16px] text-[14px]">Home</a>
+          </li>
+          <li class="link-item hover:text-[var(--clr-link)] active">
+            <a href="#" class="lg:text-[16px] text-[14px]">Explore</a>
+          </li>
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="#" class="lg:text-[16px] text-[14px]">Blog</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-nav">
+        <ul class="nav-links-mobile text-[var(--text-gray)]">
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="./index.html" class="lg:text-[16px] text-[14px]">Home</a>
+          </li>
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="./filters.html" class="lg:text-[16px] text-[14px]"
+              >Explore</a
+            >
+          </li>
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="#" class="lg:text-[16px] text-[14px]">Blog</a>
+          </li>
+          <li class="link-item flex justify-center gap-[10px] items-center">
+            <div class="search-icon w-[1.5vw] min-w-[20px]">
+              <img src="./assets/images/Home/Header/search_Icon.png" alt="" />
+            </div>
+            <span class="text-[14px]">Search</span>
+          </li>
+          <div class="link-item flex justify-center gap-[10px] items-center">
+            <div class="add-content w-[1.5vw] min-w-[20px]">
+              <img
+                src="./assets/images/Home/Header/addcontent_Icon.png"
+                alt=""
+              />
+            </div>
+            <span class="text-[14px]">Add Content</span>
+          </div>
+        </ul>
+      </div>
+      <nav class="nav-right flex items-center gap-8">
+        <div class="search-icon w-[1.5vw] min-w-[20px]">
+          <img src="./assets/images/Home/Header/search_Icon.png" alt="" />
+        </div>
+        <div class="add-content w-[1.5vw] min-w-[20px]">
+          <img src="./assets/images/Home/Header/addcontent_Icon.png" alt="" />
+        </div>
+        <div class="theme-switch w-[1.5vw] min-w-[20px] cursor-pointer">
+          <img
+            src="./assets/images/Home/Header/lightMode_Icon.png"
+            alt="Dark Mode"
+            class="dark-icon"
+          />
+          <img
+            src="./assets/images/Home/Header/moon.png"
+            alt="Light Mode"
+            class="light-icon"
+          />
+        </div>
+        <div
+          class="profile pl-8 border-l-4 border-gray-700 w-[3.5vw] h-[2vw] min-w-[60px] flex-shrink-0"
+        >
+          <img src="./assets/images/Home/Header/accountIcon.png" class="profile-avatar" alt="" />
+          <div class="login-dropdown">
+            <div class="login-link">Login</div>
+            <div class="logout-link hidden">Logout</div>
+          </div>
+        </div>
+        <div class="burger-menu">
+          <img src="./assets/images/menu.png" alt="">
+        </div>
+      </nav>
+    </header>
+    <main class="main-content">
+      <div
+        class="top-bar 2xl:mx-32 py-[2.2vw] mx-10 flex items-center justify-between border-b-[1px] border-gray-600"
+      >
+        <h1 class="page-title text-[clamp(1.1rem,1.8vw,3rem)]">Explore</h1>
+        <div class="breadcrumbs flex gap-[1vw] items-center">
+          <a href="./index.html" class="text-gray-500">Home</a>
+          <img src="./assets/images/Login/Breadcrumb_Arrow.png" alt="" />
+          <span>Explore</span>
+        </div>
+      </div>
+      <div class="genre-wrapper flex 2xl:mx-32 mx-10">
+        <button class="nav-btn prev">
+          <span
+            ><img src="./assets/images/Explore/backarrow_Icon.png" alt=""
+          /></span>
+        </button>
+        <div class="genre-slider flex gap-[1.1vw]">
+          <div class="genre-item">
+            <span class="icon"
+              ><img src="./assets/images/Explore/adventure_Icon.png" alt=""
+            /></span>
+            <span>Adventure</span>
+          </div>
+
+          <div class="genre-item">
+            <span class="icon"
+              ><img src="./assets/images/Explore/drama.png" alt=""
+            /></span>
+            <span>Drama</span>
+          </div>
+
+          <div class="genre-item">
+            <span class="icon"
+              ><img src="./assets/images/Explore/comedy.png" alt=""
+            /></span>
+            <span>Comedy</span>
+          </div>
+
+          <div class="genre-item">
+            <span class="icon"
+              ><img src="./assets/images/Explore/thriller_Icon.png" alt=""
+            /></span>
+            <span>Thriller</span>
+          </div>
+
+          <div class="genre-item">
+            <span class="icon"
+              ><img src="./assets/images/Explore/horrer_Icon.png" alt=""
+            /></span>
+            <span>Horror</span>
+          </div>
+
+          <div class="genre-item">
+            <span class="icon"
+              ><img src="./assets/images/Explore/romence_Icon.png" alt=""
+            /></span>
+            <span>Romance</span>
+          </div>
+
+          <div class="genre-item">
+            <span class="icon"
+              ><img src="./assets/images/Explore/musical_Icon.png" alt=""
+            /></span>
+            <span>Musical</span>
+          </div>
+
+          <div class="genre-item">
+            <span class="icon"
+              ><img src="./assets/images/Explore/short_Icon.png" alt=""
+            /></span>
+            <span>Short</span>
+          </div>
+
+          <div class="genre-item">
+            <span class="icon"
+              ><img src="./assets/images/Explore/action.png" alt=""
+            /></span>
+            <span>Action</span>
+          </div>
+
+          <div class="genre-item">
+            <span class="icon"
+              ><img src="./assets/images/Explore/scifi.png" alt=""
+            /></span>
+            <span>Sci-Fi</span>
+          </div>
+        </div>
+        <button class="nav-btn next">
+          <span
+            ><img src="./assets/images/Explore/nextarrow_Icon.png" alt=""
+          /></span>
+        </button>
+      </div>
+      <div
+        class="filter-container flex items-center 2xl:mx-32 mx-10 gap-[1.4vw]"
+      >
+        <div class="filter-group flex items-center w-[75%]">
+          <div
+            class="custom-select-wrapper w-[15vw] min-w-[140px] border-r-[1px] border-gray-500"
+            data-filter="mediaType"
+          >
+            <div class="select-box">
+              <input
+                type="text"
+                class="dropdown-input text-[var(--text-color)]"
+                placeholder="Select Currency"
+                autocomplete="off"
+                readonly
+                value="All Content"
+              />
+              <span class="chevron-icon">
+                <img src="./assets/images/Explore/downarrow_Icon.png" alt="" />
+              </span>
+            </div>
+            <ul class="dropdown-menu currency-selector">
+              <li data-value="">All Content</li>
+              <li data-value="movie">Movies</li>
+              <li data-value="series">TV Series</li>
+              <li data-value="documentary">Documentaries</li>
+              <li data-value="kids">Kids Content</li>
+            </ul>
+          </div>
+          <div
+            class="search-filter flex items-center w-[0] flex-grow-[1] justify-between bg-[var(--bg-card)] px-[2.5em] py-[.8em]"
+          >
+            <input
+              type="text"
+              class="bg-transparent w-0 flex-grow-[1]"
+              placeholder="Search Your Favourite Movies,Short Films..."
+            />
+            <div class="search-icon">
+              <img src="./assets/images/Explore/search_Icon.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="filter-group w-[25%] flex">
+          <button class="filter-btn flex items-center w-[12vw] min-w-[130px]">
+            <img
+              src="./assets/images/Explore/filter_Icon.png"
+              alt=""
+              class="filter-icon"
+            />
+            <span>Filter By</span>
+          </button>
+          <div class="custom-select-wrapper w-[15vw] min-w-[140px]" data-filter="releaseYear">
+            <div class="select-box">
+              <input
+                type="text"
+                class="dropdown-input text-[var(--text-color)]"
+                placeholder="Select Currency"
+                autocomplete="off"
+                readonly
+                value="Release Year"
+              />
+              <span class="chevron-icon">
+                <img src="./assets/images/Explore/downarrow_Icon.png" alt="" />
+              </span>
+            </div>
+            <ul class="dropdown-menu currency-selector">
+              <li data-value="">Any Year</li>
+              <li data-value="2026">2026</li>
+              <li data-value="2025">2025</li>
+              <li data-value="2024">2024</li>
+              <li data-value="2023">2023</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <section class="tamil-content 2xl:mx-32 mx-10 mt-20">
+        <h2
+          class="section-title flex justify-between items-center mb-8 text-[var(--text-color)] text-[clamp(1.2rem,1.7vw,2.3rem)]"
+        >
+          Recent Search
+          <div class="slider-nav gap-5 flex">
+            <div class="nav-left">
+              <img
+                src="./assets/images/Home/LatestContent/Leftarrow_Icon.png"
+                alt=""
+              />
+            </div>
+            <div class="nav-right">
+              <img
+                src="./assets/images/Home/LatestContent/RightArrow_Icon.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </h2>
+        <div class="tamil-content-slider swiper flex">
+          <div class="swiper-wrapper"></div>
+        </div>
+      </section>
+      <section class="section-top-searches 2xl:mx-32 mx-10 mt-[4vw]">
+        <h2
+          class="section-title flex justify-between items-center mb-8 text-[var(--text-color)] text-[clamp(1.2rem,1.7vw,2.3rem)]"
+        >
+          Top Search
+        </h2>
+        <div class="movies-container"></div>
+        <div class="pagination">
+          <button id="prev-page" class="page-btn">
+            <img src="./assets/images/Explore/backarrow_Icon.png" alt="" />
+          </button>
+
+          <div id="page-numbers" class="page-numbers"></div>
+
+          <button id="next-page" class="page-btn">
+            <img src="./assets/images/Explore/nextarrow_Icon.png" alt="" />
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-primary pt-[3vw] mt-[6vw] text-[var(--text-color)]">
+      <div class="content-wrapper px-[5vw] flex">
+        <div class="footer-desc">
+          <a
+            class="footer-logo w-[10vw] inline-block min-w-[120px] pb-[1vw]"
+            href="./index.html"
+          >
+            <img src="./assets/images/Home/Header/logo.png" alt="" />
+          </a>
+          <p class="desc text-[13px] text-gray-200 max-w-[20vw]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+            error assumenda recusandae beatae, ab blanditiis id necessitatibus
+            vitae temporibus odio.
+          </p>
+        </div>
+        <div class="footer-links">
+          <ul class="links-list">
+            <li class="link-item">About Us</li>
+            <li class="link-item">Terms of Use</li>
+            <li class="link-item">Privacy Policy</li>
+            <li class="link-item">FAQ</li>
+          </ul>
+        </div>
+        <div class="need-help">
+          <div class="need-help-header">Need Help</div>
+          <ul class="help-links">
+            <li class="link-item">Visit Help Center</li>
+            <li class="link-item">Share Feedback</li>
+          </ul>
+        </div>
+        <div class="connect-with">
+          <h3 class="connect-with-title">Connect With Us</h3>
+          <div class="social-links flex gap-[2vw]">
+            <div class="link-item">
+              <img src="./assets/images/Home/Footer/fb.png" alt="" />
+            </div>
+            <div class="link-item">
+              <img src="./assets/images/Home/Footer/insta.png" alt="" />
+            </div>
+            <div class="link-item">
+              <img src="./assets/images/Home/Footer/twitter.png" alt="" />
+            </div>
+            <div class="link-item">
+              <img src="./assets/images/Home/Footer/youtube.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stores flex items-center gap-[2vw] justify-end">
+        <div class="link-item">
+          <img src="./assets/images/Home/Footer/googleplay_Icon.png" alt="" />
+        </div>
+        <div class="link-item">
+          <img src="./assets/images/Home/Footer/appstore_Icon.png" alt="" />
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          Copyrights &copy; ZettaRights 2024. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="./assets/js/vendor/swiper.min.js"></script>
+    <script src="./assets/js/moviesdb.js"></script>
+    <script src="./assets/js/filters.js"></script>
+    <script src="./assets/js/linked.js"></script>
+    <script src="./assets/js/renderMovies.js"></script>
+  </body>
+</html>

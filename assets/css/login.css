@@ -1,0 +1,233 @@
+body {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/Login/BackGround_Img.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login-title {
+  font-family: "sfpro Medium";
+}
+
+.request-otp-btn,
+.verify-btn,
+.next-btn {
+  font-family: "Century Bold";
+}
+
+.create-new {
+  font-family: "Century Semi Bold";
+}
+
+.terms-label {
+  font-family: "sfpro";
+}
+
+#terms {
+  transform: scale(1.3);
+  accent-color: var(--clr-link);
+  margin-right: 8px;
+}
+
+.country-select {
+  position: relative;
+  display: inline-block;
+  z-index: 999;
+}
+
+.select-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: transparent;
+  color: white;
+
+  border: 1px solid #fdfdfd;
+  border-radius: 6px;
+
+  padding: 12px 15px;
+  cursor: pointer;
+}
+
+.flag {
+  width: 1.5vw;
+  height: 1.5vw;
+  min-width: 20px;
+  min-height: 15px;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.arrow {
+  width: 1.5vw;
+  height: 1.5vw;
+  min-width: 15px;
+  min-height: 10px;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+
+  width: 100%;
+  background: #1a1a1a;
+
+  border: 1px solid #555;
+  border-radius: 6px;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: none;
+}
+
+.dropdown li {
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.dropdown li:hover {
+  background: #333;
+}
+
+.country-select.active .dropdown {
+  display: block;
+}
+
+.login-card,
+.otp-card,
+.create-account-card {
+  background-image: url(../images/Login/Pattern.png);
+  background-color: rgba(0, 0, 0, 0.507);
+  background-size: cover;
+}
+
+.request-otp-btn:hover,
+.verify-btn:hover,
+.next-btn:hover {
+  box-shadow: 0 0 5px 1px rgba(255, 217, 0, 0.267);
+}
+
+.otp-title {
+  font-family: "Century Bold";
+}
+
+.subtitle span {
+  font-family: "Century Semi Bold";
+}
+
+.otp-boxes input {
+  height: 3.4vw;
+  width: 3.6vw;
+  min-width: 40px;
+  min-height: 35px;
+  border-radius: 8px;
+}
+
+.timer {
+  font-family: "Century Bold";
+}
+
+.card-title {
+  font-family: "Century Semi Bold";
+}
+
+.create-account-card .form-group label {
+  font-size: clamp(12px, 0.9vw, 16px);
+  color: rgb(153, 153, 153);
+  padding-block: 1.5vw 10px;
+  display: block;
+}
+
+.user-type {
+  padding-block: 1.5vw;
+  display: flex;
+  gap: 2.5vw;
+}
+
+.user-type label:has(input:checked) {
+  color: var(--clr-link);
+}
+
+.create-account-card .user-type label {
+  display: flex;
+  gap: 15px;
+  font-size: clamp(14px, 1.2vw, 24px);
+  font-family: "sfpro";
+  padding-top: 0;
+  cursor: pointer;
+}
+
+.user-type input {
+  vertical-align: middle;
+  transform: scale(1.6);
+  accent-color: var(--clr-link);
+}
+
+input {
+  transition: 0.25s ease;
+}
+
+.error-toast {
+  backdrop-filter: blur(8px);
+}
+
+.create-new {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1400px) {
+  .email-input {
+    padding: 10px !important;
+  }
+  .select-btn {
+    padding: 6px 10px !important;
+  }
+  #terms,
+  .user-type input {
+    transform: scale(1);
+  }
+  .terms-label {
+    line-height: 1;
+  }
+  .create-account-card .user-type label {
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .login-card,
+  .otp-card,
+  .create-account-card {
+    width: 400px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .login-card,
+  .otp-card,
+  .create-account-card {
+    width: 350px !important;
+    padding: 30px 20px !important;
+  }
+  .create-new {
+    padding-top: 20px !important;
+  }
+  .otp-boxes {
+    padding-block: 5vw !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login-card,
+  .otp-card,
+  .create-account-card {
+    width: 300px !important;
+  }
+}

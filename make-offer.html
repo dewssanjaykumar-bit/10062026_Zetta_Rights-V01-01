@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make an Offer | ZettaRights</title>
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <script src="./assets/js/tailwind.js"></script>
+    <link rel="stylesheet" href="./assets/css/make-offer.css" />
+    <link
+      rel="icon"
+      href="./assets/images/Home/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="toast">
+      <span class="toast-message"> Offer sent successfully! </span>
+    </div>
+    <header
+      class="header-primary sticky top-0 z-[9999] flex justify-between w-[100%] bg-[var(--bg-primary)] 2xl:px-32 py-6 px-10"
+    >
+      <nav class="nav-left flex items-center">
+        <a class="logo w-[9vw] min-w-[120px]" href="./index.html">
+          <img src="./assets/images/Home/Header/logo.png" alt="" />
+        </a>
+        <ul
+          class="nav-links ml-16 gap-8 flex lg:ml-16 text-[var(--text-gray)] xl:ml-32 lg:gap-14"
+        >
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="./index.html" class="lg:text-[16px] text-[14px]">Home</a>
+          </li>
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="./filters.html" class="lg:text-[16px] text-[14px]"
+              >Explore</a
+            >
+          </li>
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="#" class="lg:text-[16px] text-[14px]">Blog</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-nav">
+        <ul class="nav-links-mobile text-[var(--text-gray)]">
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="./index.html" class="lg:text-[16px] text-[14px]">Home</a>
+          </li>
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="./filters.html" class="lg:text-[16px] text-[14px]"
+              >Explore</a
+            >
+          </li>
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="#" class="lg:text-[16px] text-[14px]">Blog</a>
+          </li>
+          <li class="link-item flex justify-center gap-[10px] items-center">
+            <div class="search-icon w-[1.5vw] min-w-[20px]">
+              <img src="./assets/images/Home/Header/search_Icon.png" alt="" />
+            </div>
+            <span class="text-[14px]">Search</span>
+          </li>
+          <div class="link-item flex justify-center gap-[10px] items-center">
+            <div class="add-content w-[1.5vw] min-w-[20px]">
+              <img
+                src="./assets/images/Home/Header/addcontent_Icon.png"
+                alt=""
+              />
+            </div>
+            <span class="text-[14px]">Add Content</span>
+          </div>
+        </ul>
+      </div>
+      <nav class="nav-right flex items-center gap-8">
+        <div class="search-icon w-[1.5vw] min-w-[20px]">
+          <img src="./assets/images/Home/Header/search_Icon.png" alt="" />
+        </div>
+        <div class="add-content w-[1.5vw] min-w-[20px]">
+          <img src="./assets/images/Home/Header/addcontent_Icon.png" alt="" />
+        </div>
+        <div class="theme-switch w-[1.5vw] min-w-[20px] cursor-pointer">
+          <img
+            src="./assets/images/Home/Header/lightMode_Icon.png"
+            alt="Dark Mode"
+            class="dark-icon"
+          />
+          <img
+            src="./assets/images/Home/Header/moon.png"
+            alt="Light Mode"
+            class="light-icon"
+          />
+        </div>
+        <div
+          class="profile pl-8 border-l-4 border-gray-700 w-[3.5vw] h-[2vw] min-w-[60px] flex-shrink-0"
+        >
+          <img
+            src="./assets/images/Home/Header/accountIcon.png"
+            class="profile-avatar"
+            alt=""
+          />
+          <div class="login-dropdown">
+            <div class="login-link">Login</div>
+            <div class="logout-link hidden">Logout</div>
+          </div>
+        </div>
+        <div class="burger-menu">
+          <img src="./assets/images/menu.png" alt="" />
+        </div>
+      </nav>
+    </header>
+    <main class="main-content">
+      <div
+        class="top-nav 2xl:mx-32 py-[2vw] mx-10 flex justify-between items-center border-b-[1px] border-gray-700"
+      >
+        <h1 class="page-title text-[clamp(1.3rem,1.9vw,3rem)]">
+          Make an Offer
+        </h1>
+        <div
+          class="breadcrumbs flex gap-[1vw] items-center text-[clamp(14px,1.15vw,2rem)] text-[gray]"
+        >
+          <a href="./index.html">Home</a>
+          <img
+            src="./assets/images/Login/Breadcrumb_Arrow.png"
+            class="w-[.45vw]"
+            alt=""
+          />
+          <div class="prev-page">Kantara</div>
+          <img
+            src="./assets/images/Login/Breadcrumb_Arrow.png"
+            class="w-[.45vw]"
+            alt=""
+          />
+          <div class="current-page text-[var(--text-color)]">Make an Offer</div>
+        </div>
+      </div>
+      <section
+        class="license-section [@media(max-width:1024px)]:flex-col 2xl:px-32 py-6 px-10 pt-[2.5vw] flex justify-between items-start gap-[3.5vw]"
+      >
+        <aside class="stepper p-[2.2vw]">
+          <div class="step active">
+            <span class="circle">1</span>
+            <span class="label">Step 1<span class="status"></span></span>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="step">
+            <span class="circle">2</span>
+            <span class="label">Step 2 <span class="status"></span></span>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="step">
+            <span class="circle">3</span>
+            <span class="label">Step 3 <span class="status"></span></span>
+          </div>
+        </aside>
+        <div class="license-content flex-grow-[1] w-0">
+          <div class="step-section">
+            <div class="license-region border-b-[1px] border-gray-600">
+              <h2
+                class="region-title field-title text-[clamp(16px,1.1vw,2rem)]"
+              >
+                License Region
+              </h2>
+              <div class="region-wrapper">
+                <div class="select-countries">
+                  <p>
+                    Specify the countries you wish to license this content in.
+                    If you want Global rights, please select "Global"
+                  </p>
+                  <div class="select-dropdown">
+                    <div class="select-box">
+                      <input
+                        type="text"
+                        placeholder="Select Countries"
+                        id="country-input"
+                      />
+                      <button id="clear-all">Clear All</button>
+                    </div>
+                    <ul class="dropdown-menu" id="dropdown-menu">
+                      <li data-value="Global">Global</li>
+                      <li data-value="Sri Lanka">Sri Lanka</li>
+                      <li data-value="India">India</li>
+                      <li data-value="United Kingdom">United Kingdom</li>
+                      <li data-value="Australia">Australia</li>
+                      <li data-value="Canada">Canada</li>
+                      <li data-value="Germany">Germany</li>
+                      <li class="no-data" style="display: none">
+                        No data found
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tags-container"></div>
+                </div>
+                <div class="exclude-countries">
+                  <p>
+                    If you'd like to exclude certain countries/regions, select
+                    them here. This is optional. Leeve it blank if you simply.
+                  </p>
+                  <div class="select-dropdown">
+                    <div class="select-box">
+                      <input
+                        type="text"
+                        placeholder="Select Countries"
+                        list="countries2"
+                        id="country-input2"
+                      />
+                      <button id="clear-all2">Clear All</button>
+                    </div>
+                    <ul class="dropdown-menu">
+                      <li data-value="Sri Lanka">Sri Lanka</li>
+                      <li data-value="India">India</li>
+                      <li data-value="United Kingdom">United Kingdom</li>
+                      <li data-value="Australia">Australia</li>
+                      <li data-value="Canada">Canada</li>
+                      <li data-value="Germany">Germany</li>
+                      <li class="no-data" style="display: none">
+                        No data found
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tags-container"></div>
+                </div>
+              </div>
+            </div>
+            <div class="license-period border-b-[1px] border-gray-700">
+              <h2 class="region-title text-[clamp(16px,1.1vw,2rem)] py-[2vw]">
+                License Period
+              </h2>
+              <div class="period-wrapper">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="start-date">Start Date</label>
+                    <input type="date" name="start-date" id="start-date" />
+                  </div>
+                  <div class="form-group">
+                    <label for="end-date">End Date</label>
+                    <input type="date" name="end-date" id="end-date" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="years">Years</label>
+                    <input
+                      type="number"
+                      class="years"
+                      id="years"
+                      name="years"
+                      min="0"
+                      disabled
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="months">Months</label>
+                    <input
+                      type="number"
+                      class="months"
+                      id="months"
+                      name="months"
+                      min="0"
+                      disabled
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step-section rights">
+            <h2 class="region-title group-title text-[clamp(16px,1.1vw,2rem)]">
+              Rights & Commercials
+            </h2>
+            <div
+              class="form-group mt-[1.5vw] border-b-[1px] border-gray-600 pb-[2vw]"
+            >
+              <label for="currency">Offer Currency</label>
+              <div class="custom-select-wrapper">
+                <div class="select-box">
+                  <input
+                    type="text"
+                    class="dropdown-input text-[var(--text-color)]"
+                    placeholder="Select Currency"
+                    autocomplete="off"
+                    readonly
+                    value="₹ - Indian Rupee"
+                  />
+                  <span class="chevron-icon">
+                    <img src="./assets/images/Login/Down_Arrow.png" alt="" />
+                  </span>
+                </div>
+                <ul class="dropdown-menu currency-selector">
+                  <li data-value="₹ - Indian Rupee">₹ - Indian Rupee</li>
+                  <li data-value="$ - US Dollar">$ - US Dollar</li>
+                  <li data-value="€ - Euro">€ - Euro</li>
+                  <li data-value="£ - British Pound">£ - British Pound</li>
+                </ul>
+              </div>
+            </div>
+            <h2 class="group-title text-[clamp(16px,1.1vw,2rem)] mb-[1vw]">
+              Rights Types
+            </h2>
+            <div class="form-group">
+              <div class="custom-select-wrapper">
+                <div class="select-box">
+                  <input
+                    type="text"
+                    class="dropdown-input text-[var(--text-color)]"
+                    placeholder="Select Rights Type"
+                    autocomplete="off"
+                    readonly
+                    value="T-VOD (Rental)"
+                  />
+                  <span class="chevron-icon">
+                    <img src="./assets/images/Login/Down_Arrow.png" alt="" />
+                  </span>
+                </div>
+                <ul class="dropdown-menu">
+                  <li data-value="T-VOD (Rental)">T-VOD (Rental)</li>
+                  <li data-value="S-VOD (Subscription)">
+                    S-VOD (Subscription)
+                  </li>
+                  <li data-value="A-VOD (Advertiser Supported)">
+                    A-VOD (Advertiser Supported)
+                  </li>
+                  <li data-value="F-VOD (Free)">F-VOD (Free)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="config-section">
+              <table class="config-table">
+                <thead>
+                  <tr>
+                    <th>Exclusivity</th>
+                    <th>Holdback</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="status-item available">
+                        <span class="check-icon"
+                          ><img
+                            src="./assets/images/MakeAnOffer/exclusive_Icon.png"
+                            alt=""
+                        /></span>
+                        Exclusive
+                      </div>
+                      <div class="status-item available">
+                        <span class="check-icon"
+                          ><img
+                            src="./assets/images/MakeAnOffer/exclusive_Icon.png"
+                            alt=""
+                        /></span>
+                        Non Exclusive
+                      </div>
+                    </td>
+                    <td>
+                      <div class="status-item available">
+                        <span class="check-icon"
+                          ><img
+                            src="./assets/images/MakeAnOffer/exclusive_Icon.png"
+                            alt=""
+                        /></span>
+                        1 Month
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="legend-panel">
+                <div class="legend-item text-available">
+                  <span class="legend-icon"
+                    ><img
+                      src="./assets/images/MakeAnOffer/exclusive_Icon.png"
+                      alt=""
+                  /></span>
+                  Available
+                </div>
+                <div class="legend-item text-unavailable">
+                  <span class="legend-icon"
+                    ><img
+                      src="./assets/images/MakeAnOffer/unavailable_Icon.png"
+                      alt=""
+                  /></span>
+                  Unavailable
+                </div>
+                <div class="legend-item text-expired">
+                  <span class="legend-icon"
+                    ><img
+                      src="./assets/images/MakeAnOffer/right_Icon.png"
+                      alt=""
+                  /></span>
+                  Right is no longer
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step-section active">
+            <div class="payment-options flex gap-[2vw]">
+              <div class="option">
+                <input type="radio" name="amount" id="flat-rate" checked />
+                <label for="flat-rate">By Flat Rate</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="amount" id="share-revenue" />
+                <label for="share-revenue">By Share Revenue</label>
+              </div>
+            </div>
+            <div
+              class="flat-rate-container mt-[3vw] pb-[10vw] border-b-[1px] border-gray-700"
+            >
+              <h2
+                class="region-title group-title text-[clamp(16px,1.1vw,2rem)]"
+              >
+                Select this if you wish to make a fixed price Offer.
+              </h2>
+              <div class="form-group pt-[5px]">
+                <label for="fixed-amount"
+                  >Lincensee (Buyer) will pay Licensor (Seller) a fixed amount
+                  of:</label
+                >
+                <div class="inputs-wrapper flex items-center mt-[.7vw]">
+                  <div class="amount-input flex items-center">
+                    <input type="number" min="0" value="100" />
+                    <div
+                      class="currency currency-label text-[clamp(14px,1vw,20px)]"
+                    >
+                      ₹ INR
+                    </div>
+                  </div>
+                  <span>for the/a</span>
+                  <div class="price-listing">
+                    <div class="custom-select-wrapper">
+                      <div class="select-box">
+                        <input
+                          type="text"
+                          class="dropdown-input text-[var(--text-color)]"
+                          placeholder="Select Currency"
+                          autocomplete="off"
+                          readonly
+                          value="Price Listing"
+                        />
+                        <span class="chevron-icon">
+                          <img
+                            src="./assets/images/Login/Down_Arrow.png"
+                            alt=""
+                          />
+                        </span>
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li data-value="Per View">Per View</li>
+                        <li data-value="Per Stream">Per Stream</li>
+                        <li data-value="Per Day">Per Day</li>
+                        <li data-value="One-Time License">One-Time License</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="total-amount text-center">
+                <p class="text-[clamp(1rem,1.1vw,2rem)] text-gray-400">
+                  Total amount to be paid by Licensee (Buyer) is
+                </p>
+                <div class="amount text-center">
+                  <span
+                    class="currency total-currency text-[clamp(1.5rem,1.6vw,2.5rem)] mr-[5px]"
+                    >₹</span
+                  ><span class="amont-value text-[clamp(1.5rem,1.6vw,2.5rem)]"
+                    >10,000.00</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="share-revenue-container pt-[3vw]">
+              <h2
+                class="region-title group-title text-[clamp(16px,1.1vw,2rem)]"
+              >
+                Select this if you wish to pay by sharing the transaction
+                revenue earned. <br />
+                Select the Rights Types T-VOD and/or EST to enable this pricing
+                model.
+              </h2>
+              <div class="form-group border-b-[1px] border-gray-600 pb-[3vw]">
+                <label for="" class="pt-[1vw]"
+                  >Licence (Buyer) will price the transactions according to the
+                  following range.</label
+                >
+                <div
+                  class="inputs-wrapper flex flex-row items-center pt-[.5vw]"
+                >
+                  <div class="amount-input flex items-center">
+                    <input type="number" min="0" value="10" />
+                  </div>
+                  <span>to</span>
+                  <div class="amount-input flex items-center">
+                    <input type="number" min="0" value="50" />
+                    <div
+                      class="currency currency-label text-[clamp(14px,1vw,20px)]"
+                    >
+                      ₹ INR
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2
+                class="region-title group-title text-[clamp(16px,1.1vw,2rem)]"
+              >
+                per T-VOD transaction
+              </h2>
+              <div class="form-group border-b-[1px] border-gray-600 pb-[3vw]">
+                <label for="" class="pt-[.25vw]"
+                  >Share of transaction revenue Licensee (Buyer) shall pay to
+                  Licensor (Seller):</label
+                >
+                <div class="amount-input flex items-center w-[23%] mt-[.5vw]">
+                  <input type="number" min="0" value="70" />
+                  <div class="currency text-[clamp(14px,1vw,20px)]">%</div>
+                </div>
+              </div>
+              <h2
+                class="region-title group-title text-[clamp(16px,1.1vw,2rem)] pb-[.5vw]"
+              >
+                The estimated monthly license fee by transaction revenue is
+                between:
+              </h2>
+              <div class="form-group border-b-[1px] border-gray-600 pb-[3vw]">
+                <div
+                  class="inputs-wrapper flex flex-row items-center pt-[.5vw]"
+                >
+                  <div class="amount-input flex items-center">
+                    <input type="number" min="0" value="20000" />
+                    <div
+                      class="currency currency-label text-[clamp(14px,1vw,20px)]"
+                    >
+                      ₹ INR
+                    </div>
+                  </div>
+                  <span>and</span>
+                  <div class="amount-input flex items-center">
+                    <input type="number" min="0" value="200000" />
+                    <div
+                      class="currency currency-label text-[clamp(14px,1vw,20px)]"
+                    >
+                      ₹ INR
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2
+                class="region-title group-title text-[clamp(16px,1.1vw,2rem)] pb-[1vw]"
+              >
+                <input type="checkbox" id="min-guarantee" />
+                <label for="min-guarantee"
+                  >Licensee (Buyer) offers a Minimum Guarantee of</label
+                >
+              </h2>
+              <div
+                class="form-group min-guarantee border-b-[1px] border-gray-600 pb-[3vw]"
+              >
+                <div
+                  class="inputs-wrapper flex flex-row items-center pt-[.5vw]"
+                >
+                  <div class="amount-input flex items-center">
+                    <input type="number" min="0" value="20000" />
+                    <div
+                      class="currency currency-label text-[clamp(14px,1vw,20px)]"
+                    >
+                      ₹ INR
+                    </div>
+                  </div>
+                  <span>for the/a</span>
+                  <div class="custom-select-wrapper">
+                    <div class="select-box">
+                      <input
+                        type="text"
+                        class="dropdown-input text-[var(--text-color)]"
+                        placeholder="Select Currency"
+                        autocomplete="off"
+                        readonly
+                        value="Month"
+                      />
+                      <span class="chevron-icon">
+                        <img
+                          src="./assets/images/Login/Down_Arrow.png"
+                          alt=""
+                        />
+                      </span>
+                    </div>
+                    <ul class="dropdown-menu">
+                      <li data-value="Month">Month</li>
+                      <li data-value="Day">Day</li>
+                      <li data-value="Week">Week</li>
+                      <li data-value="Year">Year</li>
+                    </ul>
+                  </div>
+                  <span>for</span>
+                  <div class="custom-select-wrapper">
+                    <div class="select-box">
+                      <input
+                        type="text"
+                        class="dropdown-input text-[var(--text-color)]"
+                        placeholder="Select Currency"
+                        autocomplete="off"
+                        readonly
+                        value="Entire Bundle"
+                      />
+                      <span class="chevron-icon">
+                        <img
+                          src="./assets/images/Login/Down_Arrow.png"
+                          alt=""
+                        />
+                      </span>
+                    </div>
+                    <ul class="dropdown-menu">
+                      <li data-value="Entire Bundle">Entire Bundle</li>
+                      <li data-value="Single Movie">Single Movie</li>
+                      <li data-value="Season">Season</li>
+                      <li data-value="Channel">Channel</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cta-buttons flex justify-between mt-[2vw]">
+            <button
+              class="prev-btn bg-[var(--clr-link)] text-[var(--bg-card)] px-[2.2em] py-[.5em] text-[clamp(14px,1.1vw,21px)] rounded-[.6em]"
+            >
+              Previous
+            </button>
+            <button
+              class="next-btn bg-[var(--clr-link)] text-[var(--bg-card)] px-[2.2em] py-[.5em] text-[clamp(14px,1.1vw,21px)] rounded-[.6em]"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-primary pt-[3vw] mt-[6vw] text-[var(--text-color)]">
+      <div class="content-wrapper px-[5vw] flex">
+        <div class="footer-desc">
+          <a
+            class="footer-logo w-[10vw] inline-block min-w-[60px] pb-[1vw]"
+            href="./index.html"
+          >
+            <img src="./assets/images/Home/Header/logo.png" alt="" />
+          </a>
+          <p class="desc text-[13px] text-gray-200 max-w-[20vw]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+            error assumenda recusandae beatae, ab blanditiis id necessitatibus
+            vitae temporibus odio.
+          </p>
+        </div>
+        <div class="footer-links">
+          <ul class="links-list">
+            <li class="link-item">About Us</li>
+            <li class="link-item">Terms of Use</li>
+            <li class="link-item">Privacy Policy</li>
+            <li class="link-item">FAQ</li>
+          </ul>
+        </div>
+        <div class="need-help">
+          <div class="need-help-header">Need Help</div>
+          <ul class="help-links">
+            <li class="link-item">Visit Help Center</li>
+            <li class="link-item">Share Feedback</li>
+          </ul>
+        </div>
+        <div class="connect-with">
+          <h3 class="connect-with-title">Connect With Us</h3>
+          <div class="social-links flex gap-[2vw]">
+            <div class="link-item">
+              <img src="./assets/images/Home/Footer/fb.png" alt="" />
+            </div>
+            <div class="link-item">
+              <img src="./assets/images/Home/Footer/insta.png" alt="" />
+            </div>
+            <div class="link-item">
+              <img src="./assets/images/Home/Footer/twitter.png" alt="" />
+            </div>
+            <div class="link-item">
+              <img src="./assets/images/Home/Footer/youtube.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stores flex items-center gap-[2vw] justify-end">
+        <div class="link-item">
+          <img src="./assets/images/Home/Footer/googleplay_Icon.png" alt="" />
+        </div>
+        <div class="link-item">
+          <img src="./assets/images/Home/Footer/appstore_Icon.png" alt="" />
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          Copyrights &copy; ZettaRights 2024. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="./assets/js/linked.js"></script>
+    <script src="./assets/js/make-offer.js"></script>
+  </body>
+</html>

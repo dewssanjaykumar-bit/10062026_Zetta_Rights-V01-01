@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Details | Zetta Rights</title>
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/movie-details.css" />
+    <link
+      rel="icon"
+      href="./assets/images/Home/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/vendor/swiper.min.css"
+    />
+    <script src="./assets/js/tailwind.js"></script>
+  </head>
+  <body>
+    <div class="video-modal">
+      <div class="video-modal-content">
+        <button class="close-video-modal">
+          <img
+            src="./assets/images/DetailPage/PopupVideo/Close_Icon.png"
+            alt=""
+          />
+        </button>
+
+        <iframe
+          id="modalTrailer"
+          width="100%"
+          height="100%"
+          src=""
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+          "
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </div>
+    <header
+      class="header-primary sticky top-0 z-[9999] flex justify-between w-[100%] bg-[var(--bg-primary)] 2xl:px-32 py-6 px-10"
+    >
+      <nav class="nav-left flex items-center">
+        <a class="logo w-[9vw] min-w-[120px]" href="./index.html">
+          <img src="./assets/images/Home/Header/logo.png" alt="" />
+        </a>
+        <ul
+          class="nav-links ml-16 gap-8 flex lg:ml-16 text-[var(--text-gray)] xl:ml-32 lg:gap-14"
+        >
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="./index.html" class="lg:text-[16px] text-[14px]">Home</a>
+          </li>
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="./filters.html" class="lg:text-[16px] text-[14px]"
+              >Explore</a
+            >
+          </li>
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="#" class="lg:text-[16px] text-[14px]">Blog</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-nav">
+        <ul class="nav-links-mobile text-[var(--text-gray)]">
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="./index.html" class="lg:text-[16px] text-[14px]">Home</a>
+          </li>
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="./filters.html" class="lg:text-[16px] text-[14px]"
+              >Explore</a
+            >
+          </li>
+          <li class="link-item hover:text-[var(--clr-link)]">
+            <a href="#" class="lg:text-[16px] text-[14px]">Blog</a>
+          </li>
+          <li class="link-item flex justify-center gap-[10px] items-center">
+            <div class="search-icon w-[1.5vw] min-w-[20px]">
+              <img src="./assets/images/Home/Header/search_Icon.png" alt="" />
+            </div>
+            <span class="text-[14px]">Search</span>
+          </li>
+          <div class="link-item flex justify-center gap-[10px] items-center">
+            <div class="add-content w-[1.5vw] min-w-[20px]">
+              <img
+                src="./assets/images/Home/Header/addcontent_Icon.png"
+                alt=""
+              />
+            </div>
+            <span class="text-[14px]">Add Content</span>
+          </div>
+        </ul>
+      </div>
+      <nav class="nav-right flex items-center gap-8">
+        <div class="search-icon w-[1.5vw] min-w-[20px]">
+          <img src="./assets/images/Home/Header/search_Icon.png" alt="" />
+        </div>
+        <div class="add-content w-[1.5vw] min-w-[20px]">
+          <img src="./assets/images/Home/Header/addcontent_Icon.png" alt="" />
+        </div>
+        <div class="theme-switch w-[1.5vw] min-w-[20px]">
+          <img
+            src="./assets/images/Home/Header/lightMode_Icon.png"
+            alt="Dark Mode"
+            class="dark-icon"
+          />
+          <img
+            src="./assets/images/Home/Header/moon.png"
+            alt="Light Mode"
+            class="light-icon"
+          />
+        </div>
+        <div
+          class="profile pl-8 border-l-4 border-gray-700 w-[3.5vw] h-[2vw] min-w-[60px] flex-shrink-0"
+        >
+          <img
+            src="./assets/images/Home/Header/accountIcon.png"
+            class="profile-avatar"
+            alt=""
+          />
+          <div class="login-dropdown">
+            <div class="login-link">Login</div>
+            <div class="logout-link hidden">Logout</div>
+          </div>
+        </div>
+        <div class="burger-menu">
+          <img src="./assets/images/menu.png" alt="" />
+        </div>
+      </nav>
+    </header>
+    <main class="main-content">
+      <div
+        class="top-nav 2xl:px-32 py-6 px-10 flex items-center justify-between mt-[1.2vw]"
+      >
+        <h1
+          class="movie-name text-[var(--text-color)] text-[clamp(1.3rem,1.8vw,2.3rem)] font-bold"
+        >
+          Movie
+        </h1>
+        <div
+          class="breadcrumbs text-white flex items-center gap-[1vw] mr-[2vw]"
+        >
+          <div class="prev-page">
+            <a
+              href="./index.html"
+              class="text-[clamp(12px,1.1vw,22px)] text-gray-400"
+              >Home</a
+            >
+          </div>
+          <span class="inline-block w-[.4vw] min-w-[6px]"
+            ><img src="./assets/images/DetailPage/Breadcrumb_Icon.png" alt=""
+          /></span>
+          <div class="current-page text-[clamp(12px,1.1vw,22px)]">Movie</div>
+        </div>
+      </div>
+      <div
+        class="movie-details-container flex 2xl:px-32 py-6 px-10 gap-[3.5vw] items-start"
+      >
+        <div class="movie-images-container flex gap-[1.8vw]">
+          <div class="movie-images-small flex flex-col gap-[1vw]">
+            <div class="movie-img w-[9vw] h-[9vw]">
+              <img src="./assets/images/Login/loaderSmall.gif" alt="" />
+            </div>
+            <div class="movie-img w-[9vw] h-[9vw]">
+              <img src="./assets/images/Login/loaderSmall.gif" alt="" />
+            </div>
+            <div class="movie-img w-[9vw] h-[9vw]">
+              <img src="./assets/images/Login/loaderSmall.gif" alt="" />
+            </div>
+          </div>
+          <div class="movie-image-preview w-[29vw]">
+            <img src="./assets/images/Login/loaderSmall.gif" alt="" />
+            <div class="preview-play-btn">
+              <img src="./assets/images/DetailPage/Plybutton_Icon.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="movie-description-container text-white w-full mr-[2vw]">
+          <h2
+            class="desc-title text-[clamp(1rem,1.8vw,2rem)] font-bold pb-[.3em] w-[100%] border-gray-600 border-b-[1px]"
+          >
+            About <span class="movie-name">Movie</span>
+          </h2>
+          <p
+            class="about-movie py-2.5 text-[clamp(12px,1vw,20px)] text-[#d8d8d8]"
+          >
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae
+            optio qui voluptates quidem tempore sunt asperiores dolore
+            distinctio laborum odit!
+            <span class="text-[#ffd45e] text-[15px] read-more">Read More</span>
+          </p>
+          <div
+            class="more-info mt-[1vw] flex justify-between items-center text-[#d8d8d8] gap-[15px]"
+          >
+            <div class="info-item flex flex-wrap max-w-[340px] gap-y-2 gap-x-1">
+              <div class="duration flex items-center gap-2 mr-[.5vw]">
+                <img
+                  src="./assets/images/Home/LatestContent/Time_Icon.png"
+                  alt=""
+                  class="w-[1vw] min-w-[15px] flex-shrink-0"
+                />
+                <span class="text-[14px]">2h 28m</span>
+              </div>
+              <div class="chip-item">Action</div>
+              <div class="chip-item">Adventure</div>
+              <div class="chip-item">Drama</div>
+              <div class="chip-item">Comedy</div>
+              <div class="chip-item">Thriller</div>
+              <div class="chip-item">Horror</div>
+            </div>
+            <div class="info-item">
+              <div class="review-stars flex justify-center">
+                <img
+                  src="./assets/images/Home/LatestContent/StarFilled_Icon.png"
+                  alt=""
+                />
+                <img
+                  src="./assets/images/Home/LatestContent/StarFilled_Icon.png"
+                  alt=""
+                />
+                <img
+                  src="./assets/images/Home/LatestContent/StarFilled_Icon.png"
+                  alt=""
+                />
+                <img
+                  src="./assets/images/Home/LatestContent/StarFilled_Icon.png"
+                  alt=""
+                />
+                <img
+                  src="./assets/images/Home/LatestContent/StarFilled_Icon.png"
+                  alt=""
+                />
+              </div>
+              <div class="review-info text-[14px] mt-1 text-center">
+                <span class="stars-count">(4.9)</span>
+                <span class="reviews-count">1576 Reviews</span>
+              </div>
+            </div>
+            <div class="info-item comments flex gap-[.5vw] text-[clamp(12px,1vw,20px)]">
+              <img
+                src="./assets/images/DetailPage/Comment_Icon.png"
+                alt=""
+                class="w-[1.7vw] min-w-[15px]"
+              />
+              Comments
+              <span class="comments-count">(256)</span>
+            </div>
+          </div>
+          <div
+            class="offer-likes flex gap-[1vw] items-center mt-[2vw] pb-[1.5vw] border-b-[1px] border-gray-600"
+          >
+            <div class="flex gap-[1vw]">
+              <button
+                class="make-offer-btn bg-[var(--clr-link)] text-[var(--bg-card)] px-[1em] py-[.4em] text-[clamp(14px,1.1vw,21px)] rounded-[.6em]"
+              >
+                Make an Offer
+              </button>
+              <button
+                class="likes-btn flex items-center gap-[.7vw] bg-[#e7e7e723] px-[1.5em] py-[.6em] rounded-[.7em]"
+              >
+                <img
+                  src="./assets/images/DetailPage/Heart_Icon.png"
+                  alt=""
+                  class="w-[1.5vw] min-w-[15px]"
+                />
+                <span class="text-[clamp(14px,1.1vw,21px)]">5.5K+</span>
+              </button>
+            </div>
+            <div class="flex gap-[10px]">
+              <div class="share-btn w-[1.3vw] min-w-[12px] ml-[1vw]">
+                <img src="./assets/images/DetailPage/shareIcon.png" alt="" />
+              </div>
+              <div class="social-links flex gap-[1.5vw] ml-[.5vw]">
+                <div class="link-item">
+                  <img src="./assets/images/DetailPage/Fb_1.png" alt="" />
+                </div>
+                <div class="link-item">
+                  <img src="./assets/images/DetailPage/Insta_1.png" alt="" />
+                </div>
+                <div class="link-item">
+                  <img src="./assets/images/DetailPage/Twitter_1.png" alt="" />
+                </div>
+                <div class="link-item">
+                  <img src="./assets/images/DetailPage/Youtube_1.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tabs-container flex border-[1px] p-[.3vw] border-[#81818170] mt-[2vw] rounded-[8px] justify-center items-center w-[fit-content] mx-auto"
+          >
+            <div class="tab-item active">Casts</div>
+            <div class="tab-item">Crew</div>
+            <div class="tab-item">Rights</div>
+          </div>
+          <div class="casts flex text-center mt-[3vw] justify-between">
+            <div class="cast-item">
+              <div class="cast-img">
+                <img
+                  src="./assets/images/DetailPage/review/profileIcon.png"
+                  alt=""
+                />
+              </div>
+              <span class="char-name">Rishab Shetty</span>
+              <span class="cast-name">Kaadubettu Shiva</span>
+            </div>
+            <div class="cast-item">
+              <div class="cast-img">
+                <img
+                  src="./assets/images/DetailPage/review/profileIcon.png"
+                  alt=""
+                />
+              </div>
+              <span class="char-name">Rishab Shetty</span>
+              <span class="cast-name">Kaadubettu Shiva</span>
+            </div>
+            <div class="cast-item">
+              <div class="cast-img">
+                <img
+                  src="./assets/images/DetailPage/review/profileIcon.png"
+                  alt=""
+                />
+              </div>
+              <span class="char-name">Rishab Shetty</span>
+              <span class="cast-name">Kaadubettu Shiva</span>
+            </div>
+            <div class="cast-item">
+              <div class="cast-img">
+                <img
+                  src="./assets/images/DetailPage/review/profileIcon.png"
+                  alt=""
+                />
+              </div>
+              <span class="char-name">Rishab Shetty</span>
+              <span class="cast-name">Kaadubettu Shiva</span>
+            </div>
+            <div class="cast-item">
+              <div class="cast-img">
+                <img
+                  src="./assets/images/DetailPage/review/profileIcon.png"
+                  alt=""
+                />
+              </div>
+              <span class="char-name">Rishab Shetty</span>
+              <span class="cast-name">Kaadubettu Shiva</span>
+            </div>
+          </div>
+          <div class="crew flex text-center mt-[3vw] justify-between">
+            <div class="cast-item">
+              <div class="cast-img">
+                <img
+                  src="./assets/images/DetailPage/review/profileIcon.png"
+                  alt=""
+                />
+              </div>
+              <span class="char-name">Rishab Shetty</span>
+              <span class="cast-name">Kaadubettu Shiva</span>
+            </div>
+            <div class="cast-item">
+              <div class="cast-img">
+                <img
+                  src="./assets/images/DetailPage/review/profileIcon.png"
+                  alt=""
+                />
+              </div>
+              <span class="char-name">Rishab Shetty</span>
+              <span class="cast-name">Kaadubettu Shiva</span>
+            </div>
+            <div class="cast-item">
+              <div class="cast-img">
+                <img
+                  src="./assets/images/DetailPage/review/profileIcon.png"
+                  alt=""
+                />
+              </div>
+              <span class="char-name">Rishab Shetty</span>
+              <span class="cast-name">Kaadubettu Shiva</span>
+            </div>
+            <div class="cast-item">
+              <div class="cast-img">
+                <img
+                  src="./assets/images/DetailPage/review/profileIcon.png"
+                  alt=""
+                />
+              </div>
+              <span class="char-name">Rishab Shetty</span>
+              <span class="cast-name">Kaadubettu Shiva</span>
+            </div>
+            <div class="cast-item">
+              <div class="cast-img">
+                <img
+                  src="./assets/images/DetailPage/review/profileIcon.png"
+                  alt=""
+                />
+              </div>
+              <span class="char-name">Rishab Shetty</span>
+              <span class="cast-name">Kaadubettu Shiva</span>
+            </div>
+          </div>
+          <div class="rights pt-[3vw]">
+            <div class="available-region pb-[1.5vw]">
+              <div class="title pb-[1vw]">Available Region</div>
+              <div class="region-chips flex gap-[.5vw]">
+                <div class="region-item active">India</div>
+                <div class="region-item">United States of America</div>
+              </div>
+            </div>
+            <div class="right-types">
+              <div class="title pb-[1vw]">Right Types</div>
+              <div class="right-chips flex gap-[.5vw]">
+                <div class="right-item active">SVOD</div>
+                <div class="right-item active">Theoterical Rights</div>
+                <div class="right-item">Satellite</div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="make-offer-btn big px-[1em] py-[.5em] text-[clamp(1rem,1.5vw,2rem)]"
+          >
+            Make an Offer
+          </button>
+        </div>
+      </div>
+      <section class="related-items px-[7vw] mt-20">
+        <h2
+          class="section-title flex justify-between items-center mb-8 text-white text-[clamp(1.2rem,1.7vw,2.3rem)]"
+        >
+          Related Items
+          <div class="slider-nav gap-5">
+            <div class="nav-left">
+              <img
+                src="./assets/images/Home/LatestContent/Leftarrow_Icon.png"
+                alt=""
+              />
+            </div>
+            <div class="nav-right">
+              <img
+                src="./assets/images/Home/LatestContent/RightArrow_Icon.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </h2>
+        <div class="related-items-slider swiper flex">
+          <div class="swiper-wrapper"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-primary pt-[3vw] mt-[6vw] text-white">
+      <div class="content-wrapper px-[5vw] flex">
+        <div class="footer-desc">
+          <a
+            class="footer-logo w-[10vw] inline-block min-w-[120px] pb-[1vw]"
+            href="./index.html"
+          >
+            <img src="./assets/images/Home/Header/logo.png" alt="" />
+          </a>
+          <p class="desc text-[13px] text-gray-200 max-w-[20vw]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+            error assumenda recusandae beatae, ab blanditiis id necessitatibus
+            vitae temporibus odio.
+          </p>
+        </div>
+        <div class="footer-links">
+          <ul class="links-list">
+            <li class="link-item">About Us</li>
+            <li class="link-item">Terms of Use</li>
+            <li class="link-item">Privacy Policy</li>
+            <li class="link-item">FAQ</li>
+          </ul>
+        </div>
+        <div class="need-help">
+          <div class="need-help-header">Need Help</div>
+          <ul class="help-links">
+            <li class="link-item">Visit Help Center</li>
+            <li class="link-item">Share Feedback</li>
+          </ul>
+        </div>
+        <div class="connect-with">
+          <h3 class="connect-with-title">Connect With Us</h3>
+          <div class="social-links flex gap-[2vw]">
+            <div class="link-item">
+              <img src="./assets/images/Home/Footer/fb.png" alt="" />
+            </div>
+            <div class="link-item">
+              <img src="./assets/images/Home/Footer/insta.png" alt="" />
+            </div>
+            <div class="link-item">
+              <img src="./assets/images/Home/Footer/twitter.png" alt="" />
+            </div>
+            <div class="link-item">
+              <img src="./assets/images/Home/Footer/youtube.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stores flex items-center gap-[2vw] justify-end">
+        <div class="link-item">
+          <img src="./assets/images/Home/Footer/googleplay_Icon.png" alt="" />
+        </div>
+        <div class="link-item">
+          <img src="./assets/images/Home/Footer/appstore_Icon.png" alt="" />
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          Copyrights &copy; ZettaRights 2024. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="./assets/js/vendor/swiper.min.js"></script>
+    <script src="./assets/js/moviesdb.js"></script>
+    <script src="./assets/js/movie-details.js"></script>
+    <script src="./assets/js/linked.js"></script>
+  </body>
+</html>

@@ -1,0 +1,610 @@
+.movie-images-small .movie-img {
+  border: 0.5vw solid var(--bg-card);
+  border-radius: 4px;
+}
+
+.movie-images-small .movie-img.selected {
+  border: 0.5vw solid transparent;
+  outline: 1px solid rgb(255, 196, 0);
+}
+
+.movie-image-preview {
+  border: 0.9vw solid var(--bg-card);
+  border-radius: 8px;
+}
+
+.movie-image-preview img {
+  border-radius: 4px;
+}
+
+.about-movie {
+  font-family: "sfpro";
+}
+
+.movie-genres::-webkit-scrollbar {
+  display: none; 
+}
+
+.chip-item {
+  padding: 0.2em 0.8em;
+  border: 1px solid rgb(219, 219, 219);
+  font-size: 12px;
+  border-radius: 6px;
+  line-height: 1.4;
+}
+
+.review-stars {
+  gap: 0.3vw;
+}
+
+.review-stars img {
+  width: 1.1vw;
+  min-width: 15px;
+}
+
+.info-item {
+  font-family: "sfpro";
+}
+
+.make-offer-btn {
+  font-family: "sfpro";
+  font-weight: bold;
+}
+
+.make-offer-btn:hover {
+  box-shadow: 0 0 5px 1px var(--clr-link);
+}
+
+.social-links .link-item {
+  width: 1.2vw;
+  min-width: 15px;
+}
+
+.tab-item {
+  font-size: clamp(14px, 1vw, 20px);
+  padding: 0.5em 3em;
+  border-radius: 0.5em;
+  color: var(--text-color);
+}
+
+.tab-item.active {
+  background-color: var(--text-color);
+  color: var(--bg-card);
+  font-family: "Century Bold";
+}
+
+.cast-img {
+  width: 3.8vw;
+  height: 3.8vw;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-inline: auto;
+}
+
+.cast-img img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.casts,
+.crew {
+  gap: 10px;
+  justify-content: center !important;
+}
+
+.cast-item {
+  width: 7vw;
+}
+
+.char-name {
+  font-size: clamp(14px, 1vw, 16px);
+  padding-block: 0.5em 0;
+  display: block;
+  max-width: 100%;
+  min-width: 70px;
+  margin-inline: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cast-name {
+  font-size: clamp(12px, 0.8vw, 14px);
+  color: rgba(201, 201, 201, 0.514);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 6vw;
+  margin-inline: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+:root.light .cast-name,
+:root.light .char-name,
+:root.light .desc-title,
+:root.light .footer-links,
+:root.light .need-help {
+  color: rgb(0, 0, 0);
+}
+
+:root.light .current-page {
+  color: var(--clr-link);
+}
+
+:root.light .likes-btn {
+  background-color: gray;
+}
+
+:root.light .likes-btn.active {
+  background-color: rgb(219, 23, 23);
+}
+
+:root.light .share-btn {
+  filter: invert(1);
+}
+
+:root.light .breadcrumbs span,
+:root.light .info-item > img,
+:root.light .duration img {
+  filter: invert(1);
+}
+
+:root.light .about-text,
+:root.light .info-item {
+  color: rgb(53, 53, 53);
+}
+
+.make-offer-btn.big {
+  background-color: var(--clr-link);
+  color: var(--bg-card);
+  width: 72%;
+  margin-inline: auto;
+  display: block;
+  margin-top: 3vw;
+  border-radius: 0.5em;
+  font-family: "sfpro Bold";
+}
+
+.make-offer-btn.big:hover {
+  box-shadow: 0 0 7px 1px var(--clr-link);
+}
+
+.region-item,
+.right-item {
+  padding: 0.3em 0.7em;
+  border: 1px solid gray;
+  font-size: clamp(12px, 0.8vw, 16px);
+  border-radius: 5px;
+  color: rgba(128, 128, 128, 0.863);
+}
+
+.region-item.active,
+.right-item.active {
+  color: rgb(4, 255, 171);
+  border: 1px solid rgb(4, 255, 171);
+}
+
+.title {
+  font-size: clamp(14px, 1vw, 20px);
+  color: rgb(199, 198, 198);
+}
+
+.tab-item {
+  cursor: pointer;
+}
+
+.section-title {
+  font-family: "Century Semi Bold";
+}
+
+.slider-nav {
+  display: flex;
+}
+
+.swiper-button-disabled {
+  opacity: 0.6;
+}
+
+.slide-item {
+  min-height: 20vw;
+}
+
+.slider-nav .nav-left,
+.slider-nav .nav-right {
+  width: 2.3vw;
+  min-width: 30px;
+}
+
+.movie-img {
+  position: relative;
+  height: 9vw;
+  cursor: pointer;
+}
+
+.movie-img.active {
+  outline: 1px solid rgb(255, 208, 0);
+  border: 0.5vw solid transparent;
+}
+
+.movie-img img {
+  width: 100%;
+  object-fit: contain;
+  height: 100%;
+  object-position: center;
+}
+
+.movie-image-preview {
+  height: 29vw;
+}
+
+.movie-image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.like-btn {
+  position: absolute;
+  top: 7%;
+  right: 5%;
+}
+
+.like-btn .liked {
+  display: none;
+}
+
+.like,
+.liked {
+  width: 2vw;
+  min-width: 20px;
+  cursor: pointer;
+}
+
+.make-offer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5em 1em;
+  color: black;
+  background-color: rgb(255, 208, 0);
+  font-size: 12px;
+  font-family: "sfpro Bold";
+  border-radius: 5px;
+  box-shadow: 0 0 3px 1px rgb(255, 217, 0);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.read-more {
+  cursor: pointer;
+}
+
+.slide-item:hover .make-offer {
+  opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.reviews {
+  gap: 2px;
+  margin-right: 10px;
+}
+
+.reviews + span {
+  font-size: 12px;
+}
+
+.review-count {
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+.reviews img {
+  width: 1vw;
+  min-width: 7px;
+}
+
+.movie-info .row {
+  gap: 3px;
+}
+
+.movie-title {
+  font-size: clamp(14px, 1.08vw, 2rem);
+  font-family: "Century Semi Bold";
+  color: var(--text-color);
+  padding-bottom: 0.3em;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+
+.movie-info .row {
+  display: flex;
+  color: var(--text-color);
+  padding-bottom: 0.5vw;
+}
+
+.slide-item {
+  border: 0.6vw solid var(--bg-card);
+  border-radius: 10px;
+  background-color: var(--bg-card);
+}
+
+.slide-img {
+  border: 1vw solid rgba(172, 172, 172, 0.61);
+  border-radius: 10px;
+}
+
+.slide-item .movie-img {
+  height: 12vw;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.slide-item .movie-img img {
+  height: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2vw;
+  min-width: 20px;
+}
+
+.movie-duration {
+  gap: 5px;
+  margin-right: 13px;
+  font-size: 11px;
+}
+
+.duration img {
+  min-width: 10px !important;
+}
+
+.movie-desc {
+  font-size: 12px;
+  line-height: 1.2;
+  margin-bottom: 1vw;
+  height: 3.5rem;
+  font-family: "sfpro";
+}
+
+.movie-desc {
+  min-height: calc(12px * 1.2 * 3);
+   display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.movie-duration img {
+  width: 0.7vw;
+  min-width: 10px;
+}
+
+.movie-genres {
+  gap: 5px;
+  flex-wrap: nowrap;
+}
+
+.movie-genres {
+  display: flex;
+  gap: 4px;
+  overflow: hidden;
+  padding-inline: 1px 5px;
+  flex: 1;
+  min-width: 0; 
+}
+
+.genre-item {
+  padding: 3px 5px;
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.social-links .link-item:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.main-content > *:not(.hero-banner) .swiper-slide {
+  position: relative;
+  margin-bottom: 2vw;
+}
+
+.main-content > *:not(.hero-banner) .swiper-slide:hover {
+  overflow: visible;
+}
+.main-content > *:not(.hero-banner) .swiper-slide:hover::after {
+  transform: rotate(2deg) translateY(5%) translateX(-3%);
+}
+
+.main-content > *:not(.hero-banner) .swiper-slide::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(-75deg, rgb(0, 162, 255), transparent);
+  border-radius: 10px;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.preview-play-btn {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 20%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.movie-image-preview {
+  position: relative;
+}
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.video-modal.active {
+  display: flex;
+}
+
+.video-modal-content {
+  width: 80%;
+  max-width: 1200px;
+  aspect-ratio: 16/9;
+  position: relative;
+  box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.493);
+  border-radius: 12px;
+}
+
+.video-modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.close-video-modal {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 99999;
+  width: 2vw;
+}
+
+.likes-btn.active {
+  background-color: rgb(212, 28, 28);
+}
+
+@media screen and (max-width: 1200px) {
+  .slide-item .movie-img {
+    height: 16vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .movie-details-container {
+    flex-direction: column;
+  }
+  .movie-images-container {
+    margin-inline: auto;
+  }
+  .movie-details-container .movie-img {
+    width: 13vw !important;
+    height: 13vw !important;
+  }
+  .movie-image-preview {
+    width: 41vw !important;
+    height: 41vw;
+  }
+  .cast-item {
+    width: 15vw;
+  }
+  .cast-name {
+    max-width: 14vw;
+  }
+  .slide-item {
+    border: 10px solid var(--bg-card);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .slide-item .movie-img {
+    height: 23vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie-details-container .movie-img {
+    width: 18vw !important;
+    height: 18vw !important;
+  }
+  .movie-image-preview {
+    width: 56vw !important;
+    height: 56vw;
+  }
+  .top-nav {
+    flex-direction: column-reverse;
+    align-items: flex-start !important;
+    gap: 20px;
+  }
+  .casts,
+  .crew {
+    flex-wrap: wrap;
+  }
+  .cast-item {
+    min-width: 40%;
+  }
+  .tabs-container {
+    padding: 5px !important;
+  }
+  .related-items {
+    margin-top: 5vw !important ;
+  }
+  .breadcrumbs {
+    gap: 10px !important;
+  }
+  .info-item.comments {
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .more-info {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  .tab-item {
+    padding-inline: 1.5em;
+  }
+  .slide-item .movie-img {
+    height: 40vw !important;
+  }
+  .offer-likes {
+    flex-direction: column;
+    gap: 5vw !important;
+    align-items: flex-start !important;
+    padding-block: 4vw !important;
+  }
+  .offer-likes > * {
+    gap: 10px !important;
+  }
+  .movie-details-container,
+  .top-nav {
+    padding-inline: 20px !important;
+  }
+}
