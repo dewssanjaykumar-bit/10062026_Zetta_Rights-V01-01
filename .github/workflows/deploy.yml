@@ -1,47 +1,39 @@
-name: CI/CD Pipeline
+name: Deploy Static Site to GitHub Pages
 
-# 1. Trigger the workflow on push or pull request to the main branch
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+
+# Grant permissions required to deploy to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
-
-    steps:
-    # Checkout your repository code onto the runner
-    - name: Checkout Code
-      uses: actions/checkout@v4
-
-    # Set up Node.js environment
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-      # Use Node version 20 (adjust as needed)
-        node-version: '20' 
-        cache: 'npm'
-
-    # Install dependencies (CI ensures clean installs based on lock file)
-    - name: Install Dependencies
-      run: npm ci
-
-    # Run tests if you have them configured in package.json
-    - name: Run Build / Tests
-      run: npm run build --if-present
-
-  # Optional Deployment Job (Example: Deploying to GitHub Pages)
   deploy:
-    needs: build-and-test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
+      # 1. Checkout your repository code
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    # Add your deployment action here (e.g., GitHub Pages, Netlify, Vercel, or FTP)
-    - name: Deployment Placeholder
-      run: echo "Code built successfully and ready for deployment!"
+      # 2. Setup GitHub Pages configuration
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      # 3. Upload your entire repository (or a specific folder if your files are inside one, e.g., 'public/')
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # Change this to './public' or your folder name if your files aren't in the root
+
+      # 4. Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
