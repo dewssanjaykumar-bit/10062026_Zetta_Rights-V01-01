@@ -29,7 +29,10 @@ async function fetchMovies(page = 1) {
   const response = await fetch(
     `${TMDB_BASE_URL}/discover/movie?api_key=${TMDB_API_KEY}
     &sort_by=popularity.desc
+    &include_adult=false
     &include_video=false
+    &vote_count.gte=500
+    &certification.lte=PG-13
     &page=${page}`.replace(/\s/g, ""),
   );
 
@@ -120,6 +123,7 @@ async function fetchFilteredMovies(filter, page = 1) {
       `api_key=${TMDB_API_KEY}`,
       "language=en-US",
       `page=${requestedPage}`,
+      "include_adult=false",
     ];
 
     if (filter.query) {
